@@ -1,0 +1,238 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('../images/bg.jpg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+
+  margin: 0;
+
+  color: #fff;
+
+  min-height: 100vh;
+}
+
+a,
+ul {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  color: #ffffff;
+
+  font-size: 1.7rem;
+}
+
+.main {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 30px 0;
+}
+
+header .menu-icon {
+  display: none;
+  position: absolute;
+}
+
+header .ham {
+  width: 40px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 3px;
+  margin-bottom: 4px;
+}
+
+header .logo {
+  width: 300px;
+}
+
+header .logo img {
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+.container {
+  display: flex;
+}
+
+.content-area {
+  flex: 1;
+  margin-top: 40px;
+}
+
+.content-area h1 {
+  font-size: 5rem;
+}
+
+.content-area p {
+  font-size: 1.9rem;
+  margin: 20px;
+}
+
+.content-area .cta {
+  display: flex;
+  margin-top: 40px;
+}
+
+.cta .button {
+  width: 200px;
+  height: 50px;
+
+  font-size: 1.8rem;
+
+  border-radius: 10px;
+  background-color: #29be56;
+  color: #fff;
+
+  margin: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta .button-blue {
+  background-color: #3498db;
+}
+
+.phone-area .phone1 {
+  /* Configuração para que a imagem se adapte a altura */
+  height: 450px;
+  width: auto;
+  /* Para que possamos usar o z-index temos que colocar a propriedade de positon: relative ou absolute */
+  position: relative;
+  z-index: 2;
+
+  top: 10px;
+}
+
+.phone-area .phone2 {
+  /* Configuração para que a imagem se adapte a altura */
+  height: 450px;
+  width: auto;
+  /* Para que possamos usar o z-index temos que colocar a propriedade de positon: relative ou absolute */
+  position: relative;
+  z-index: 1;
+
+  margin-left: -100px; /* Para colocar a imagem uma encima da outra*/
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 850px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .content-area {
+    text-align: center;
+  }
+
+  .content-area .cta {
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .content-area h1 {
+    margin-top: 0;
+    font-size: 4rem;
+    margin: 15px;
+  }
+
+  .content-area p {
+    margin: 0 40px;
+  }
+
+  .phone-area {
+    text-align: center;
+  }
+
+  .phone-area .phone1 {
+    top: 0;
+    margin-right: 15px;
+  }
+
+  .phone-area .phone2 {
+    margin-left: 0;
+  }
+
+  .logo {
+    margin: 15px;
+    width: 200px;
+    height: auto;
+  }
+}
+
+@media (max-width: 670px) {
+  nav {
+    display: none;
+  }
+
+  header .menu-icon {
+    display: block;
+
+    margin: 15px;
+  }
+
+  header .logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  header .logo img {
+    width: 200px;
+  }
+
+  .container h1 {
+    font-size: 3rem;
+    margin-top: 0;
+  }
+
+  .container p {
+    font-size: 1.4rem;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .phone-area {
+    margin-bottom: 50px;
+  }
+
+  .phone-area .phone1 {
+    top: 10px;
+    height: 450px;
+  }
+
+  .phone-area .phone2 {
+    height: 450px;
+    margin-left: -150px;
+  }
+}
